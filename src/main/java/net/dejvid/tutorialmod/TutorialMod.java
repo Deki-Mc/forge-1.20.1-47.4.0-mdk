@@ -1,5 +1,9 @@
 package net.dejvid.tutorialmod;
 
+import net.dejvid.tutorialmod.block.ModBlocks;
+import net.dejvid.tutorialmod.itam.ModCreativeModeTabs;
+import net.dejvid.tutorialmod.itam.ModItems;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -24,6 +28,11 @@ public class TutorialMod
     {
         IEventBus modEventBus = context.getModEventBus();
 
+        ModCreativeModeTabs.register(modEventBus);
+
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
+
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
@@ -35,6 +44,10 @@ public class TutorialMod
     }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS){
+            event.accept(ModItems.TITANIUM);
+            event.accept(ModItems.RAW_TITANIUM);
+        }
     }
 
     @SubscribeEvent

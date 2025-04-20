@@ -1,0 +1,11 @@
+{
+  "item.tutorialmod.titanium": "Titanium Ingot",
+  "item.tutorialmod.raw_titanium": "Raw Titanium",
+  "block.tutorialmod.titanium_block": "Titanium Block",
+  "block.tutorialmod.titanium_ore": "Titanium Ore",
+  "block.tutorialmod.block_of_raw_titanium": "Block of Raw Titanium",
+  "block.tutorialmod.deepslate_titanium_ore": "Deepslate Titanium Ore",
+  "block.tutorialmod.sound_block": "Sound Block",
+
+  "creative.tutorial_tab": "Kingdoms and Castels"
+}
